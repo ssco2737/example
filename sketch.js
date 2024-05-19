@@ -3,7 +3,7 @@ let video;
 function preload() {}
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.hide();
 }
@@ -16,8 +16,8 @@ function draw() {
   video.loadPixels();
 
   // 그리드를 만든다
-  for (let y = 0; y < 108; y = y + 1) {
-    for (let x = 0; x <192; x = x + 1) {
+  for (let y = 0; y < 48; y = y + 1) {
+    for (let x = 0; x <64; x = x + 1) {
       let c = getVideoColor(x * 10, y * 10);
       let r = red(c);
       let g = green(c);
